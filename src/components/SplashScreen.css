@@ -1,0 +1,56 @@
+/* src/components/SplashScreen.css */
+.splash-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.splash-logo {
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  margin-bottom: 20px;
+}
+
+.letter-l {
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.splash-text {
+  font-size: 24px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .splash-logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .letter-l {
+    font-size: 60px;
+  }
+  
+  .splash-text {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,161 @@
+/* src/components/Message.css */
+.message-wrapper {
+  display: flex;
+  margin-bottom: 12px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.message-wrapper.own {
+  justify-content: flex-end;
+}
+
+.message-wrapper.other {
+  justify-content: flex-start;
+}
+
+.message-bubble {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 18px;
+  position: relative;
+  word-wrap: break-word;
+  transition: all 0.2s;
+}
+
+.message-wrapper.own .message-bubble {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.message-wrapper.other .message-bubble {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-bottom-left-radius: 4px;
+}
+
+.message-sender {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.message-text {
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.message-image {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: transform 0.2s;
+  display: block;
+}
+
+.message-image:hover {
+  transform: scale(1.02);
+}
+
+.message-image:active {
+  transform: scale(0.98);
+}
+
+.message-meta {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.message-time {
+  font-size: 10px;
+}
+
+.message-read {
+  font-size: 12px;
+}
+
+/* Модальное окно для просмотра изображения */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  animation: zoomIn 0.3s ease-out;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .message-bubble {
+    max-width: 85%;
+    padding: 8px 12px;
+  }
+  
+  .message-text {
+    font-size: 13px;
+  }
+  
+  .message-image {
+    max-width: 150px;
+    max-height: 150px;
+  }
+  
+  .message-sender {
+    font-size: 11px;
+  }
+  
+  .message-meta {
+    font-size: 9px;
+  }
+}
+
+/* Поддержка для устройств с сенсорным экраном */
+@media (hover: none) {
+  .message-image:hover {
+    transform: none;
+  }
+}
