@@ -19,5 +19,7 @@
   "display": "standalone",
   "theme_color": "#6c5ce7",
   "background_color": "#1a1a1a",
+  "orientation": "portrait",
+  "scope": "/linarapp/",
   "gcm_sender_id": "103953800507"
 }
