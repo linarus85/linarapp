@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/linarapp/static/css/main.10ce5835.css",
+    "main.js": "/linarapp/static/js/main.718c60a8.js",
+    "static/js/182.a8334e6b.chunk.js": "/linarapp/static/js/182.a8334e6b.chunk.js",
+    "static/js/453.4316859a.chunk.js": "/linarapp/static/js/453.4316859a.chunk.js",
+    "index.html": "/linarapp/index.html",
+    "main.10ce5835.css.map": "/linarapp/static/css/main.10ce5835.css.map",
+    "main.718c60a8.js.map": "/linarapp/static/js/main.718c60a8.js.map",
+    "182.a8334e6b.chunk.js.map": "/linarapp/static/js/182.a8334e6b.chunk.js.map",
+    "453.4316859a.chunk.js.map": "/linarapp/static/js/453.4316859a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.10ce5835.css",
+    "static/js/main.718c60a8.js"
+  ]
+}
